@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "68d0ef5dad1afd053534c434ae5e8a3687d6842223b3ad5b56be4853fece9f8d"
+            "sha256": "70a73c49eec630b82da66cd7ac440560f3d9100d6e85d5f032905926b49cb036"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -29,41 +29,53 @@
         ]
     },
     "default": {
-        "certifi": {
+        "aiohttp": {
             "hashes": [],
-            "version": "==2018.10.15"
+            "version": "==3.4.4"
+        },
+        "aiopg": {
+            "hashes": [],
+            "version": "==0.15.0"
+        },
+        "async-timeout": {
+            "hashes": [],
+            "version": "==3.0.1"
+        },
+        "attrs": {
+            "hashes": [],
+            "version": "==18.2.0"
         },
         "chardet": {
             "hashes": [],
             "version": "==3.0.4"
         },
-        "django": {
-            "hashes": [],
-            "version": "==2.1.3"
-        },
         "idna": {
             "hashes": [],
             "version": "==2.7"
         },
-        "pillow": {
+        "idna-ssl": {
             "hashes": [],
-            "version": "==5.3.0"
+            "version": "==1.1.0"
+        },
+        "multidict": {
+            "hashes": [],
+            "version": "==4.4.2"
+        },
+        "psycopg2": {
+            "hashes": [],
+            "version": "==2.7.6.1"
         },
         "psycopg2-binary": {
             "hashes": [],
             "version": "==2.7.6.1"
         },
-        "pytz": {
+        "uvloop": {
             "hashes": [],
-            "version": "==2018.7"
+            "version": "==0.11.3"
         },
-        "requests": {
+        "yarl": {
             "hashes": [],
-            "version": "==2.20.1"
-        },
-        "urllib3": {
-            "hashes": [],
-            "version": "==1.24.1"
+            "version": "==1.2.6"
         }
     },
     "develop": {}

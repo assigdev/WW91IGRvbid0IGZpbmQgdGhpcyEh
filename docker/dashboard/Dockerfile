@@ -8,7 +8,9 @@ COPY apps/dashboard/Pipfile.lock /Pipfile.lock
 RUN pipenv install --system
 
 RUN mkdir -p /dashboard
+
 RUN adduser dashboard
 USER dashboard
+
 ADD apps/dashboard/src /src
 WORKDIR /dashboard/src

@@ -166,4 +166,4 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-/dashboard/src/media/
+apps/dashboard/src/media/

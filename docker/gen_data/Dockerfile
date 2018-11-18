@@ -9,7 +9,9 @@ RUN pipenv install --system
 
 RUN mkdir -p /gen_data
 WORKDIR /gen_data
-ADD apps/gen_data/app /app
 
 RUN adduser gen_data
 USER gen_data
+
+ADD apps/gen_data/app /gen_data/app
+

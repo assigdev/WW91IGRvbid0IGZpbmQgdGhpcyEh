@@ -10,4 +10,4 @@ def update_from_external(obj):
     now = datetime.now(tz=timezone.get_current_timezone())
     obj.image.save(f'{now}.png', image_file)
     obj.date = now
-    obj.save(update_fields={'date'})
+    obj.save()
