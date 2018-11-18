@@ -8,10 +8,7 @@ COPY apps/dashboard/Pipfile.lock /Pipfile.lock
 RUN pipenv install --system
 
 RUN mkdir -p /dashboard
-WORKDIR /dashboard
-ADD apps/dashboard/src /src
-
 RUN adduser dashboard
 USER dashboard
-
-CMD ['python', 'manage.py', 'runserver', '0.0.0.0:8000']
+ADD apps/dashboard/src /src
+WORKDIR /dashboard/src
