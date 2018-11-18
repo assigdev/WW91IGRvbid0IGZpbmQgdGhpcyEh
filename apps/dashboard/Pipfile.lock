@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "7b63b6f90e76d9c3417d49ff6fdc059b223a8f1f0a967454fa45c8f939e02ea1"
+            "sha256": "b362174e20d1caf46afc8624bd197b2b376bcccb8341eb71016804b6944de574"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -29,9 +29,21 @@
         ]
     },
     "default": {
+        "certifi": {
+            "hashes": [],
+            "version": "==2018.10.15"
+        },
+        "chardet": {
+            "hashes": [],
+            "version": "==3.0.4"
+        },
         "django": {
             "hashes": [],
             "version": "==2.1.3"
+        },
+        "idna": {
+            "hashes": [],
+            "version": "==2.7"
         },
         "pillow": {
             "hashes": [],
@@ -44,6 +56,14 @@
         "pytz": {
             "hashes": [],
             "version": "==2018.7"
+        },
+        "requests": {
+            "hashes": [],
+            "version": "==2.20.1"
+        },
+        "urllib3": {
+            "hashes": [],
+            "version": "==1.24.1"
         }
     },
     "develop": {}
