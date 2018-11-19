@@ -8,7 +8,8 @@ class GraphicAdmin(admin.ModelAdmin):
 
     def get_graphic(self, obj):
         if not obj.error and obj.image:
-            return mark_safe(f'<img src="{obj.image.url}" width="300" height="180" />')
+            return mark_safe(f'<a href="{obj.image.url}" target="_blank">'
+                             f'<img src="{obj.image.url}" width="300" height="180" /></a>')
         return obj.error or 'Ожидается'
 
     get_graphic.short_description = 'График'
