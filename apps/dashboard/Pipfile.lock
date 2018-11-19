@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "68d0ef5dad1afd053534c434ae5e8a3687d6842223b3ad5b56be4853fece9f8d"
+            "sha256": "c1ee563e9f9efb82558391e8faac889bb5e6d8645e6e6f746d899862ca3c1448"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -29,6 +29,18 @@
         ]
     },
     "default": {
+        "amqp": {
+            "hashes": [],
+            "version": "==2.3.2"
+        },
+        "billiard": {
+            "hashes": [],
+            "version": "==3.5.0.4"
+        },
+        "celery": {
+            "hashes": [],
+            "version": "==4.2.1"
+        },
         "certifi": {
             "hashes": [],
             "version": "==2018.10.15"
@@ -45,6 +57,10 @@
             "hashes": [],
             "version": "==2.7"
         },
+        "kombu": {
+            "hashes": [],
+            "version": "==4.2.1"
+        },
         "pillow": {
             "hashes": [],
             "version": "==5.3.0"
@@ -57,6 +73,10 @@
             "hashes": [],
             "version": "==2018.7"
         },
+        "redis": {
+            "hashes": [],
+            "version": "==3.0.1"
+        },
         "requests": {
             "hashes": [],
             "version": "==2.20.1"
@@ -64,6 +84,10 @@
         "urllib3": {
             "hashes": [],
             "version": "==1.24.1"
+        },
+        "vine": {
+            "hashes": [],
+            "version": "==1.1.4"
         }
     },
     "develop": {}

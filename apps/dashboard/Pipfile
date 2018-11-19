@@ -11,6 +11,8 @@ django = "==2.1.3"
 "psycopg2-binary" = "*"
 pillow = "*"
 requests = "*"
+celery = "*"
+redis = "*"
 
 
 [dev-packages]

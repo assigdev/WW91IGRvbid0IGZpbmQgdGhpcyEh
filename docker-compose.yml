@@ -54,3 +54,27 @@ services:
 
   gen_image_app:
     image: onsdigital/highcharts-export-node
+
+  celery_worker_graphic:
+    build:
+      context: .
+      dockerfile: ./docker/dashboard/Dockerfile
+    command: 'python -m celery -A base worker -l debug -Q graphic'
+    depends_on:
+      - dashboard_app
+      - rabbit_mq
+      - redis
+    volumes:
+      - ./apps/dashboard:/dashboard
+
+  redis:
+    image: "redis:alpine"
+    restart: always
+
+  rabbit_mq:
+    image: rabbitmq:3-management
+    restart: always
+    environment:
+      RABBITMQ_DEFAULT_USER: "rabbitmq"
+      RABBITMQ_DEFAULT_PASS: "rabbitmq"
+      RABBITMQ_DEFAULT_VHOST: "0"

@@ -7,6 +7,10 @@ COPY apps/dashboard/Pipfile /Pipfile
 COPY apps/dashboard/Pipfile.lock /Pipfile.lock
 RUN pipenv install --system
 
+ADD apps/dashboard/celery_fix.sh /celery_fix.sh
+RUN ["chmod", "+x", "/celery_fix.sh"]
+RUN /celery_fix.sh
+
 RUN mkdir -p /dashboard
 
 RUN adduser dashboard
