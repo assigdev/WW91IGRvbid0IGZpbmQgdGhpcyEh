@@ -14,7 +14,7 @@ services:
     build:
       context: .
       dockerfile: ./docker/dashboard/Dockerfile
-    command: python manage.py runserver 0.0.0.0:8000
+    command: sh ../run_test_server.sh
     volumes:
       - ./apps/dashboard:/dashboard
     depends_on:
@@ -30,6 +30,10 @@ services:
       - POSTGRES_PORT=5432
       - GEN_DATA_URL=http://gen_data_app:8888/get_data/
       - GEN_IMAGE_URL=http://gen_image_app:8080/
+      - RABBITMQ_HOST=rabbit_mq
+      - RABBITMQ_USER=rabbitmq
+      - RABBITMQ_PASS=rabbitmq
+      - REDIS_HOST=redis
     ports:
        - "8000:8000"
 
@@ -66,6 +70,19 @@ services:
       - redis
     volumes:
       - ./apps/dashboard:/dashboard
+    environment:
+      - DEBUG=true
+      - POSTGRES_DB=dashboard
+      - POSTGRES_USER=dashboard
+      - POSTGRES_PASSWORD=dashboard
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=5432
+      - GEN_DATA_URL=http://gen_data_app:8888/get_data/
+      - GEN_IMAGE_URL=http://gen_image_app:8080/
+      - RABBITMQ_HOST=rabbit_mq
+      - RABBITMQ_USER=rabbitmq
+      - RABBITMQ_PASS=rabbitmq
+      - REDIS_HOST=redis
 
   redis:
     image: "redis:alpine"

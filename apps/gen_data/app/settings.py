@@ -9,7 +9,7 @@ if TYPE_CHECKING:
 
 @dataclass
 class PostgreConfig:
-    """MongoDB config section."""
+    """Postgre config section."""
     dsn: str = field(init=False)
 
     def __init__(self, user: str, password: str, host: str, dbname: str):
@@ -46,5 +46,4 @@ def load_config(app: 'web.Application') -> 'ServerConfig':
         format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
         level=logging.DEBUG if app['config'].debug else logging.INFO
     )
-
     return config

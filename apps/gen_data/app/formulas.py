@@ -21,7 +21,7 @@ class Formula:
             now = datetime.strptime(self.req_data.now, '%d.%m.%y %H:%M:%S.%f')
             time = now - timedelta(days=self.req_data.interval)
             timestamps = []
-            while time < now:
+            while time <= now:
                 timestamps.append(time.timestamp())
                 time = time + timedelta(hours=self.req_data.dt)
             self.timestamps = timestamps

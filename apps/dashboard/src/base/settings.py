@@ -128,8 +128,14 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 GEN_DATA_URL = os.getenv('GEN_DATA_URL', 'http://gen_data_app:8888/get_data/')
 GEN_IMAGE_URL = os.getenv('GEN_IMAGE_URL', 'http://gen_image_app:8080/')
 
-CELERY_RESULT_BACKEND = 'redis://redis:6379/0'
-BROKER_URL = 'amqp://rabbitmq:rabbitmq@rabbit_mq:5672/0'
+RABBITMQ_HOST = os.getenv('RABBITMQ_HOST', 'rabbit_mq')
+RABBITMQ_USER = os.getenv('RABBITMQ_USER', 'rabbitmq')
+RABBITMQ_PASS = os.getenv('RABBITMQ_PASS', 'rabbitmq')
+
+REDIS_HOST = os.getenv('REDIS_HOST', 'redis')
+
+CELERY_RESULT_BACKEND = f'redis://{REDIS_HOST}:6379/0'
+BROKER_URL = f'amqp://{RABBITMQ_USER}:{RABBITMQ_PASS}@{RABBITMQ_HOST}:5672/0'
 CELERY_ROUTES = {
     'graphics.tasks.update_graphic_task': {'queue': 'graphic'},
 }

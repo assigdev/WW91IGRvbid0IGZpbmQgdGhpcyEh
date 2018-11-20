@@ -12,5 +12,4 @@ logger = logging.getLogger(__name__)
 def setup_routes(app: 'web.Application'):
     """App routes."""
     logger.debug('Setup routes.')
-    app.router.add_route(method='POST', path='/get_data/',
-                         handler=GenerateData)
+    app.router.add_route(method='POST', path='/get_data/', handler=GenerateData)
