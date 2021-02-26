@@ -7,7 +7,7 @@ name = "pypi"
 
 [packages]
 
-aiohttp = "==3.4.4"
+aiohttp = "==3.7.4"
 "psycopg2-binary" = "*"
 aiopg = "*"
 uvloop = "*"
